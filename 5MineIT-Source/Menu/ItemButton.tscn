@@ -1,0 +1,15 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://Themes/non_selected_button_theme.tres" type="StyleBox" id=1]
+[ext_resource path="res://Menu/Menu.gd" type="Script" id=2]
+
+[node name="Button" type="Button"]
+margin_right = 18.0
+margin_bottom = 18.0
+custom_styles/hover = ExtResource( 1 )
+custom_styles/normal = ExtResource( 1 )
+text = "+"
+script = ExtResource( 2 )
+__meta__ = {
+"_edit_use_anchors_": false
+}

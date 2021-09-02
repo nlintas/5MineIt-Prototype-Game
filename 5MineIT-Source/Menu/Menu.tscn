@@ -1,0 +1,377 @@
+[gd_scene load_steps=14 format=2]
+
+[ext_resource path="res://Menu/ItemButton.tscn" type="PackedScene" id=1]
+[ext_resource path="res://Themes/background.jpg" type="Texture" id=2]
+[ext_resource path="res://Assets/Boots1.png" type="Texture" id=3]
+[ext_resource path="res://Assets/Hat2.png" type="Texture" id=4]
+[ext_resource path="res://Assets/Gun1.png" type="Texture" id=5]
+[ext_resource path="res://Menu/PriceLabel.gd" type="Script" id=6]
+[ext_resource path="res://Assets/boots.png" type="Texture" id=7]
+[ext_resource path="res://Assets/ShootGun.png" type="Texture" id=8]
+[ext_resource path="res://Assets/assaultRifle.png" type="Texture" id=9]
+[ext_resource path="res://Assets/jetpack.png" type="Texture" id=10]
+[ext_resource path="res://Assets/drill.png" type="Texture" id=11]
+[ext_resource path="res://Menu/Menu.gd" type="Script" id=12]
+[ext_resource path="res://Assets/machineGun.png" type="Texture" id=13]
+
+[node name="Menu" type="MarginContainer"]
+margin_right = 320.0
+margin_bottom = 180.0
+script = ExtResource( 12 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="background" type="Sprite" parent="."]
+position = Vector2( 160, 90 )
+scale = Vector2( 0.712443, 0.6 )
+texture = ExtResource( 2 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="ItemContainers" type="Node2D" parent="."]
+
+[node name="BootsNode" type="Node2D" parent="ItemContainers"]
+position = Vector2( 217, 5 )
+
+[node name="ReferenceRect" type="ReferenceRect" parent="ItemContainers/BootsNode"]
+margin_left = 26.0
+margin_top = 12.0
+margin_right = 92.0
+margin_bottom = 52.0
+border_color = Color( 0.0313726, 0, 0, 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="BootsButton" parent="ItemContainers/BootsNode" instance=ExtResource( 1 )]
+margin_left = 66.0
+margin_top = 16.0
+margin_right = 86.0
+margin_bottom = 35.0
+script = null
+
+[node name="Boots" type="Sprite" parent="ItemContainers/BootsNode"]
+position = Vector2( 46, 31 )
+rotation = 4.5087e-10
+scale = Vector2( 0.165676, 0.147509 )
+texture = ExtResource( 3 )
+
+[node name="BootsLabel" type="Label" parent="ItemContainers/BootsNode"]
+margin_left = 67.0
+margin_top = 37.0
+margin_right = 100.0
+margin_bottom = 52.0
+rect_scale = Vector2( 0.579043, 0.615477 )
+text = "300c"
+script = ExtResource( 6 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+price = 100
+
+[node name="ShotgunNode" type="Node2D" parent="ItemContainers"]
+position = Vector2( 107.543, 5.33371 )
+
+[node name="ShotgunRect" type="ReferenceRect" parent="ItemContainers/ShotgunNode"]
+margin_left = 25.0
+margin_top = 12.0
+margin_right = 92.0
+margin_bottom = 52.0
+border_color = Color( 0.0313726, 0, 0, 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="ShotgunButton" parent="ItemContainers/ShotgunNode" instance=ExtResource( 1 )]
+margin_left = 66.0
+margin_top = 16.0
+margin_right = 86.0
+margin_bottom = 35.0
+script = null
+
+[node name="Gun2" type="Sprite" parent="ItemContainers/ShotgunNode"]
+position = Vector2( 46.457, 30.6663 )
+texture = ExtResource( 8 )
+
+[node name="ShotgunLabel" type="Label" parent="ItemContainers/ShotgunNode"]
+margin_left = 67.0
+margin_top = 37.0
+margin_right = 100.0
+margin_bottom = 52.0
+rect_scale = Vector2( 0.579043, 0.615477 )
+text = "300c"
+script = ExtResource( 6 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+price = 1500
+
+[node name="GunNode" type="Node2D" parent="ItemContainers"]
+
+[node name="ReferenceRect2" type="ReferenceRect" parent="ItemContainers/GunNode"]
+margin_left = 242.0
+margin_top = 70.0
+margin_right = 308.0
+margin_bottom = 110.0
+border_color = Color( 0.0313726, 0, 0, 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="GunButton" parent="ItemContainers/GunNode" instance=ExtResource( 1 )]
+margin_left = 283.0
+margin_top = 74.0
+margin_right = 303.0
+margin_bottom = 93.0
+script = null
+
+[node name="GunLabel" type="Label" parent="ItemContainers/GunNode"]
+margin_left = 283.0
+margin_top = 98.0
+margin_right = 316.0
+margin_bottom = 113.0
+rect_scale = Vector2( 0.579043, 0.615477 )
+text = "500c"
+script = ExtResource( 6 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+price = 100
+
+[node name="Gun" type="Sprite" parent="ItemContainers/GunNode"]
+position = Vector2( 266, 91 )
+scale = Vector2( 0.040921, 0.042102 )
+texture = ExtResource( 5 )
+
+[node name="HatNode" type="Node2D" parent="ItemContainers"]
+
+[node name="ReferenceRect3" type="ReferenceRect" parent="ItemContainers/HatNode"]
+margin_left = 242.0
+margin_top = 125.0
+margin_right = 308.0
+margin_bottom = 165.0
+border_color = Color( 0.0313726, 0, 0, 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="HatButton" parent="ItemContainers/HatNode" instance=ExtResource( 1 )]
+margin_left = 284.0
+margin_top = 129.0
+margin_right = 304.0
+margin_bottom = 148.0
+script = null
+
+[node name="HatLabel" type="Label" parent="ItemContainers/HatNode"]
+margin_left = 285.0
+margin_top = 153.0
+margin_right = 318.0
+margin_bottom = 167.0
+rect_scale = Vector2( 0.579043, 0.615477 )
+text = "100c"
+script = ExtResource( 6 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+price = 100
+
+[node name="Hat" type="Sprite" parent="ItemContainers/HatNode"]
+position = Vector2( 263, 146 )
+scale = Vector2( 0.0606281, 0.0629082 )
+texture = ExtResource( 4 )
+
+[node name="DrillNode" type="Node2D" parent="ItemContainers"]
+
+[node name="ReferenceRect5" type="ReferenceRect" parent="ItemContainers/DrillNode"]
+margin_left = 30.0
+margin_top = 17.0
+margin_right = 99.0
+margin_bottom = 57.0
+border_color = Color( 0.0313726, 0, 0, 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="DrillButton" parent="ItemContainers/DrillNode" instance=ExtResource( 1 )]
+margin_left = 72.0
+margin_top = 21.0
+margin_right = 92.0
+margin_bottom = 40.0
+script = null
+
+[node name="DrillLabel" type="Label" parent="ItemContainers/DrillNode"]
+margin_left = 73.0
+margin_top = 45.0
+margin_right = 106.0
+margin_bottom = 59.0
+rect_scale = Vector2( 0.579043, 0.615477 )
+text = "100c"
+script = ExtResource( 6 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+price = 1200
+
+[node name="Drill" type="Sprite" parent="ItemContainers/DrillNode"]
+position = Vector2( 50, 37 )
+scale = Vector2( 0.084125, 0.07375 )
+texture = ExtResource( 11 )
+
+[node name="JetpackNode" type="Node2D" parent="ItemContainers"]
+
+[node name="ReferenceRect7" type="ReferenceRect" parent="ItemContainers/JetpackNode"]
+margin_left = 133.0
+margin_top = 129.0
+margin_right = 204.0
+margin_bottom = 169.0
+border_color = Color( 0.0313726, 0, 0, 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="JetpackButton" parent="ItemContainers/JetpackNode" instance=ExtResource( 1 )]
+margin_left = 183.0
+margin_top = 130.0
+margin_right = 203.0
+margin_bottom = 149.0
+script = null
+
+[node name="JetpackLabel" type="Label" parent="ItemContainers/JetpackNode"]
+margin_left = 184.0
+margin_top = 156.0
+margin_right = 217.0
+margin_bottom = 170.0
+rect_scale = Vector2( 0.579043, 0.615477 )
+text = "100c"
+script = ExtResource( 6 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+price = 350
+
+[node name="Jetpack" type="Sprite" parent="ItemContainers/JetpackNode"]
+position = Vector2( 158.76, 150.237 )
+scale = Vector2( 0.0724193, 0.0733146 )
+texture = ExtResource( 10 )
+
+[node name="SpecialBootsNode" type="Node2D" parent="ItemContainers"]
+
+[node name="ReferenceRect6" type="ReferenceRect" parent="ItemContainers/SpecialBootsNode"]
+margin_left = 30.0
+margin_top = 128.0
+margin_right = 99.0
+margin_bottom = 168.0
+border_color = Color( 0.0313726, 0, 0, 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="SpecialBootsButton" parent="ItemContainers/SpecialBootsNode" instance=ExtResource( 1 )]
+margin_left = 78.0
+margin_top = 129.0
+margin_right = 98.0
+margin_bottom = 148.0
+script = null
+
+[node name="SpecialBootsLabel" type="Label" parent="ItemContainers/SpecialBootsNode"]
+margin_left = 79.0
+margin_top = 155.0
+margin_right = 112.0
+margin_bottom = 169.0
+rect_scale = Vector2( 0.579043, 0.615477 )
+text = "100c"
+script = ExtResource( 6 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+price = 500
+
+[node name="SpecialBoots" type="Sprite" parent="ItemContainers/SpecialBootsNode"]
+position = Vector2( 53, 147 )
+scale = Vector2( 0.10821, 0.102042 )
+texture = ExtResource( 7 )
+
+[node name="AssaultRifleNode" type="Node2D" parent="ItemContainers"]
+
+[node name="MGReferenceRect" type="ReferenceRect" parent="ItemContainers/AssaultRifleNode"]
+margin_left = 30.0
+margin_top = 73.0
+margin_right = 100.0
+margin_bottom = 116.0
+border_color = Color( 0.0352941, 0.0352941, 0.0352941, 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="AssaultRifleButton" parent="ItemContainers/AssaultRifleNode" instance=ExtResource( 1 )]
+margin_left = 76.0
+margin_top = 77.0
+margin_right = 96.0
+margin_bottom = 96.0
+script = null
+
+[node name="AssaultRifleLabel" type="Label" parent="ItemContainers/AssaultRifleNode"]
+margin_left = 77.0
+margin_top = 100.0
+margin_right = 110.0
+margin_bottom = 114.0
+rect_scale = Vector2( 0.579043, 0.615477 )
+text = "430c"
+script = ExtResource( 6 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+price = 430
+
+[node name="AssaultRifle" type="Sprite" parent="ItemContainers/AssaultRifleNode"]
+position = Vector2( 55, 95 )
+scale = Vector2( 0.104839, 0.104839 )
+texture = ExtResource( 13 )
+
+[node name="MachineGunNode" type="Node2D" parent="ItemContainers"]
+
+[node name="MGReferenceRect" type="ReferenceRect" parent="ItemContainers/MachineGunNode"]
+margin_left = 134.0
+margin_top = 74.0
+margin_right = 204.0
+margin_bottom = 117.0
+border_color = Color( 0.0352941, 0.0352941, 0.0352941, 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="MachineGunButton" parent="ItemContainers/MachineGunNode" instance=ExtResource( 1 )]
+margin_left = 178.0
+margin_top = 78.0
+margin_right = 198.0
+margin_bottom = 97.0
+script = null
+
+[node name="MachineGunLabel" type="Label" parent="ItemContainers/MachineGunNode"]
+margin_left = 177.0
+margin_top = 102.0
+margin_right = 210.0
+margin_bottom = 116.0
+rect_scale = Vector2( 0.579043, 0.615477 )
+text = "500c"
+script = ExtResource( 6 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+price = 500
+
+[node name="MachineGun" type="Sprite" parent="ItemContainers/MachineGunNode"]
+position = Vector2( 155, 96 )
+scale = Vector2( 0.131356, 0.131356 )
+texture = ExtResource( 9 )
+[connection signal="button_up" from="ItemContainers/BootsNode/BootsButton" to="." method="_upgrade" binds= [ "Boots" ]]
+[connection signal="button_up" from="ItemContainers/ShotgunNode/ShotgunButton" to="." method="_purchase" binds= [ "Shotgun" ]]
+[connection signal="button_up" from="ItemContainers/GunNode/GunButton" to="." method="_upgrade" binds= [ "Gun" ]]
+[connection signal="button_up" from="ItemContainers/HatNode/HatButton" to="." method="_upgrade" binds= [ "Hat" ]]
+[connection signal="button_up" from="ItemContainers/DrillNode/DrillButton" to="." method="_purchase" binds= [ "Drill" ]]
+[connection signal="button_up" from="ItemContainers/JetpackNode/JetpackButton" to="." method="_purchase" binds= [ "Jetpack" ]]
+[connection signal="button_up" from="ItemContainers/SpecialBootsNode/SpecialBootsButton" to="." method="_purchase" binds= [ "SpecialBoots" ]]
+[connection signal="button_up" from="ItemContainers/AssaultRifleNode/AssaultRifleButton" to="." method="_purchase" binds= [ "AssaultRifle" ]]
+[connection signal="button_up" from="ItemContainers/MachineGunNode/MachineGunButton" to="." method="_purchase" binds= [ "MachineGun" ]]

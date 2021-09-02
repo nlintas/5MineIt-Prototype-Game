@@ -1,0 +1,53 @@
+[gd_scene load_steps=6 format=2]
+
+[ext_resource path="res://Assets/far_mountains_fc.png" type="Texture" id=1]
+[ext_resource path="res://Assets/grassy_mountains_fc.png" type="Texture" id=2]
+[ext_resource path="res://Assets/sky_fc.png" type="Texture" id=3]
+
+[sub_resource type="Gradient" id=1]
+colors = PoolColorArray( 0.290196, 0.431373, 0.466667, 1, 0.298039, 0.298039, 0.298039, 1 )
+
+[sub_resource type="GradientTexture" id=2]
+gradient = SubResource( 1 )
+width = 100
+
+[node name="TextureRect" type="TextureRect"]
+margin_left = -1024.0
+margin_top = -384.0
+margin_right = 10240.0
+margin_bottom = 64.0
+texture = ExtResource( 3 )
+stretch_mode = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="TextureRect2" type="TextureRect" parent="."]
+margin_top = 248.0
+margin_right = 11256.0
+margin_bottom = 464.0
+texture = ExtResource( 1 )
+stretch_mode = 2
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="TextureRect3" type="TextureRect" parent="TextureRect2"]
+margin_left = 8.0
+margin_top = 24.0
+margin_right = 11264.0
+margin_bottom = 240.0
+texture = ExtResource( 2 )
+stretch_mode = 2
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="TextureRect" type="TextureRect" parent="."]
+margin_left = 11264.0
+margin_top = 488.0
+margin_right = 11364.0
+margin_bottom = 11744.0
+rect_rotation = 90.0
+texture = SubResource( 2 )
+stretch_mode = 1

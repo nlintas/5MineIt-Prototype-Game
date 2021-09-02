@@ -1,0 +1,121 @@
+[gd_scene load_steps=9 format=2]
+
+[ext_resource path="res://Player/Player.png" type="Texture" id=1]
+[ext_resource path="res://Player/Player.gd" type="Script" id=2]
+[ext_resource path="res://Player/between_shoot_cooldown.gd" type="Script" id=3]
+
+[sub_resource type="CapsuleShape2D" id=1]
+radius = 5.95859
+height = 10.4122
+
+[sub_resource type="Animation" id=2]
+resource_name = "RunDown"
+length = 0.6
+loop = true
+tracks/0/type = "value"
+tracks/0/path = NodePath("Sprite:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.1, 0.2, 0.3, 0.4, 0.5 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1 ),
+"update": 1,
+"values": [ 19, 20, 21, 22, 23, 18 ]
+}
+
+[sub_resource type="Animation" id=3]
+resource_name = "RunLeft"
+length = 0.6
+loop = true
+tracks/0/type = "value"
+tracks/0/path = NodePath("Sprite:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.1, 0.2, 0.3, 0.4, 0.5 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1 ),
+"update": 1,
+"values": [ 13, 14, 15, 16, 17, 12 ]
+}
+
+[sub_resource type="Animation" id=4]
+length = 0.6
+loop = true
+tracks/0/type = "value"
+tracks/0/path = NodePath("Sprite:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.1, 0.2, 0.3, 0.4, 0.5 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1 ),
+"update": 1,
+"values": [ 1, 2, 3, 4, 5, 0 ]
+}
+
+[sub_resource type="Animation" id=5]
+length = 0.6
+loop = true
+tracks/0/type = "value"
+tracks/0/path = NodePath("Sprite:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.1, 0.2, 0.3, 0.4, 0.5 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1 ),
+"update": 1,
+"values": [ 7, 8, 9, 10, 11, 6 ]
+}
+
+[node name="Player" type="KinematicBody2D" groups=[
+"player",
+]]
+scale = Vector2( 1.75, 1.75 )
+collision_mask = 65
+script = ExtResource( 2 )
+move_speed = 500
+
+[node name="Sprite" type="Sprite" parent="."]
+position = Vector2( 0.483795, -3.77897 )
+texture = ExtResource( 1 )
+hframes = 60
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2( -3.72529e-09, -1.8182 )
+shape = SubResource( 1 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+anims/RunDown = SubResource( 2 )
+anims/RunLeft = SubResource( 3 )
+anims/RunRight = SubResource( 4 )
+anims/RunUp = SubResource( 5 )
+
+[node name="Camera2D" type="Camera2D" parent="."]
+current = true
+zoom = Vector2( 3, 3 )
+
+[node name="fire_position" type="Node2D" parent="."]
+position = Vector2( 7.59856, -4.28088 )
+
+[node name="shoot_cooldown" type="Timer" parent="."]
+wait_time = 0.001
+
+[node name="between_shoot_cooldown" type="Timer" parent="."]
+wait_time = 0.05
+script = ExtResource( 3 )
+
+[node name="DrillTimer" type="Timer" parent="."]
+wait_time = 0.5
+[connection signal="timeout" from="shoot_cooldown" to="." method="_on_shoot_cooldown_timeout"]
+[connection signal="timeout" from="between_shoot_cooldown" to="." method="_on_between_shoot_cooldown_timeout"]
+[connection signal="timeout" from="DrillTimer" to="." method="_on_DrillTimer_timeout"]

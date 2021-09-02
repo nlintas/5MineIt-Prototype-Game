@@ -1,0 +1,31 @@
+Development Time: 2 weeks.
+University of Sheffield Project from:
+
+Nikolaos Lintas - https://www.linkedin.com/in/nikos-li-computer-science-971130209/ - https://github.com/nlintas
+    - Animator (work in source but cut from final version)
+    - Story Writer
+    - Game Balancing
+    - Sound Designer
+    - Project Manager
+    - UI Programmer
+    - Quality Assurance
+    - Game Programmer
+    - Game Testing
+    - Game Producer
+
+Phillip Kalatzis - https://www.linkedin.com/in/phillipos-andrianos-k-968454119/
+    - Physics Engine Programmer
+    - Game Programmer
+    - UI Programmer
+
+Ardit Ymeri - https://www.linkedin.com/in/ardit-ymeri-1025371ba/
+    - Physics Engine Programmer
+    - Game Designer
+    - Game Programmer
+
+Learta Yanuzi - https://www.linkedin.com/in/learta-januzi-448a861bb/
+    - Level Designer
+    - Game Artist
+    - Game Designer
+    - Game Programmer
+    - Game Producer

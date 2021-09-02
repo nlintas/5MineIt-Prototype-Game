@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/Far away.ogg-e6278f18f851c95ba229a80e9146c158.oggstr"
+
+[deps]
+
+source_file="res://Music and Sounds/Background Music/Far away.ogg"
+dest_files=[ "res://.import/Far away.ogg-e6278f18f851c95ba229a80e9146c158.oggstr" ]
+
+[params]
+
+loop=true
+loop_offset=0

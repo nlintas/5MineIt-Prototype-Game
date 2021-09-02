@@ -1,0 +1,51 @@
+[gd_scene load_steps=8 format=2]
+
+[ext_resource path="res://Assets/gems/purple2.png" type="Texture" id=1]
+[ext_resource path="res://Assets/gems/purple3.png" type="Texture" id=2]
+[ext_resource path="res://Assets/gems/purple1.png" type="Texture" id=3]
+[ext_resource path="res://Minerals/amethyst.gd" type="Script" id=4]
+
+[sub_resource type="CircleShape2D" id=1]
+radius = 15.0356
+
+[sub_resource type="SpriteFrames" id=2]
+animations = [ {
+"frames": [ ExtResource( 3 ), ExtResource( 1 ), ExtResource( 2 ), ExtResource( 1 ) ],
+"loop": true,
+"name": "default",
+"speed": 3.0
+} ]
+
+[sub_resource type="Animation" id=3]
+resource_name = "bounce"
+length = 0.5
+tracks/0/type = "value"
+tracks/0/path = NodePath("AnimatedSprite:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.3, 0.5 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 0,
+"values": [ Vector2( 0, 0 ), Vector2( -0.297302, -63.3253 ), Vector2( 0.297302, -19.6219 ) ]
+}
+
+[node name="amethyst" type="Area2D"]
+collision_layer = 16
+collision_mask = 7
+script = ExtResource( 4 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource( 1 )
+
+[node name="AnimatedSprite" type="AnimatedSprite" parent="."]
+frames = SubResource( 2 )
+frame = 1
+playing = true
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+anims/bounce = SubResource( 3 )
+[connection signal="body_entered" from="." to="." method="_on_amethyst_body_entered"]
+[connection signal="animation_finished" from="AnimationPlayer" to="." method="_on_AnimationPlayer_animation_finished"]

@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/navigating_selector.ogg-fd142d33932e1c1bde8b20e13d232756.oggstr"
+
+[deps]
+
+source_file="res://Music and Sounds/Menu Sound Effects/navigating_selector.ogg"
+dest_files=[ "res://.import/navigating_selector.ogg-fd142d33932e1c1bde8b20e13d232756.oggstr" ]
+
+[params]
+
+loop=false
+loop_offset=0

@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/Parabola.ogg-2012f90bf5a4409518fcc75c8705e264.oggstr"
+
+[deps]
+
+source_file="res://Music and Sounds/Background Music/Parabola.ogg"
+dest_files=[ "res://.import/Parabola.ogg-2012f90bf5a4409518fcc75c8705e264.oggstr" ]
+
+[params]
+
+loop=true
+loop_offset=0
